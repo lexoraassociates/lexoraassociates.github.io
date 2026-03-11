@@ -1,0 +1,84 @@
+/* MOBILE FLOATING CONTACT MENU */
+
+.mobile-contact-menu{
+    display:none;
+}
+
+@media (max-width:768px){
+.mobile-contact-menu{
+    display:block;
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    z-index:999;
+}
+
+.mobile-contact-btn{
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#002347;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+.mobile-contact-options{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:10px;
+    opacity:0;
+    transform:translateY(20px);
+    pointer-events:none;
+    transition:0.3s;
+}
+
+.mobile-contact-menu.active .mobile-contact-options{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+}
+
+.m-contact{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:18px;
+    text-decoration:none;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+.m-contact.call{
+    background:#2563eb;
+}
+
+.m-contact.whatsapp{
+    background:#25D366;
+}
+
+.m-contact.email{
+    background:#ef4444;
+}
+
+.m-contact.consult{
+    background:#c5a059;
+}
+
+/* remove old icons */
+
+.whatsapp-btn{
+    display:none;
+}
+
+.consult-btn{
+    display:none;
+}
+
+}
