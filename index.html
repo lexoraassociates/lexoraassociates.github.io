@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     
     <!-- AOS Library CSS (Fixed Link) -->
-    <link href="https://unpkg.com" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -62,18 +62,30 @@
     <section id="practice" class="practice-section">
         <h2 data-aos="fade-right">Our Practice Areas</h2>
         <div class="card-container">
-            <div class="card" data-aos="zoom-in" data-aos-delay="200">
-                <h3>Civil Law</h3>
-                <p>Expertise in property disputes, contracts, and family matters.</p>
-            </div>
-            <div class="card" data-aos="zoom-in" data-aos-delay="400">
-                <h3>Criminal Law</h3>
-                <p>Dedicated defense and legal advice for criminal proceedings.</p>
-            </div>
-            <div class="card" data-aos="zoom-in" data-aos-delay="600">
-                <h3>Corporate Law</h3>
-                <p>Handling business registrations and legal compliance.</p>
-            </div>
+            <a href="civil-law.html" class="practice-link">
+                <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                    <h3>Civil Law</h3>
+                    <p>Expertise in property disputes, contracts, and family matters.</p>
+                </div>
+            </a>
+            <a href="criminal-law.html" class="practice-link">
+                <div class="card" data-aos="zoom-in" data-aos-delay="400">
+                    <h3>Criminal Law</h3>
+                    <p>Dedicated defense and legal advice for criminal proceedings.</p>
+                </div>
+            </a>
+            <a href="corporate-law.html" class="practice-link">
+                <div class="card" data-aos="zoom-in" data-aos-delay="600">
+                    <h3>Corporate Law</h3>
+                    <p>Handling business registrations and legal compliance.</p>
+                </div>
+            </a>
+            <a href="consumer-law.html" class="practice-link">
+                <div class="card" data-aos="zoom-in" data-aos-delay="800">
+                    <h3>Consumer Cases</h3>
+                    <p>Handling consumer disputes and protecting consumer rights.</p>
+                </div>
+            </a>
         </div>
     </section>
     <!-- Contact Section -->
@@ -141,7 +153,7 @@
 
 
     <!-- AOS Library JS (Fixed Link) -->
-    <script src="https://unpkg.com"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>    
     <script>
       // AOS को चालू करना
       AOS.init({
