@@ -8,12 +8,21 @@
     <meta name="description" content="Advocate Raveena Kashyap provides professional legal services in civil, criminal, corporate and consumer law in Shimla Himachal Pradesh.">
     <meta name="keywords" content="Lawyer Shimla, Advocate Shimla, Civil Lawyer Shimla, Criminal Lawyer Shimla">
     <meta name="author" content="Adv. Raveena Kashyap">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lexoraassociates.github.io">
+
+    <meta property="og:title" content="Adv. Raveena Kashyap | Legal Consultant Shimla">
+    <meta property="og:description" content="Professional legal services in civil, criminal, corporate and consumer law in Shimla.">
+    <meta property="og:type" content="website">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/mobile-floating-menu.css">
     
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -24,6 +33,23 @@
 
 </head>
 <body>
+
+    <div class="scroll-progress"></div>
+
+    <!-- Premium Page Loader -->
+    <div class="page-loader">
+        <div class="loader-container">
+        ```
+            <div class="loader-ring"></div>
+            <div class="loader-icon">
+                ⚖️
+            </div>
+            <h2 class="loader-text">Lexora Associates</h2>
+            <p class="loader-subtext">Loading...</p>
+        </div>
+    ```
+    </div>
+
 
     <!-- Navigation Bar -->
     <nav class="navbar">
@@ -103,7 +129,7 @@
         <div class="practice-grid">
             <div class="practice-card" data-aos="zoom-in">
                 <a href="civil-law.html" class="practice-link">
-                    <div class="practice-icon">⚖️</div>
+                    <div class="practice-icon"><i class="fas fa-scale-balanced"></i></div>
                     <h3>Civil Law</h3>
                     <p>Property disputes and civil litigation matters.</p>
                     <span class="read-more">Read More →</span>
@@ -111,7 +137,7 @@
             </div>
             <div class="practice-card" data-aos="zoom-in" data-aos-delay="200">
                 <a href="criminal-law.html" class="practice-link">
-                <div class="practice-icon">🏛️</div>
+                <div class="practice-icon"><i class="fas fa-gavel"></i></div>
                 <h3>Criminal Law</h3>
                 <p>Legal defense and representation in criminal cases and investigations.</p>
                 <span class="read-more">Read More →</span>
@@ -119,7 +145,7 @@
             </div>
             <div class="practice-card" data-aos="zoom-in" data-aos-delay="400">
                 <a href="corporate-law.html" class="practice-link">
-                <div class="practice-icon">📑</div>
+                <div class="practice-icon"><i class="fas fa-briefcase"></i></div>
                 <h3>Corporate Law</h3>
                 <p>Business registration, compliance, legal agreements and documentation.</p>
                 <span class="read-more">Read More →</span>
@@ -127,10 +153,30 @@
             </div>
             <div class="practice-card" data-aos="zoom-in" data-aos-delay="600">
                 <a href="consumer-law.html" class="practice-link">
-                <div class="practice-icon">🛒</div>
+                <div class="practice-icon"><i class="fas fa-cart-shopping"></i></div>
                 <h3>Consumer Cases</h3>
                 <p>Protecting consumer rights and resolving disputes with companies.</p>
                 <span class="read-more">Read More →</span>
+                </a>
+            </div>            
+            <div class="practice-card" data-aos="zoom-in" data-aos-delay="800">
+                <a href="family-law.html" class="practice-link">
+                    <div class="practice-icon">
+                        <i class="fas fa-people-roof"></i>
+                    </div>
+                    <h3>Family Law</h3>
+                    <p>Legal assistance in divorce, child custody, maintenance and family disputes.</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+            </div>
+            <div class="practice-card" data-aos="zoom-in" data-aos-delay="1000">
+                <a href="revenue-law.html" class="practice-link">
+                    <div class="practice-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Revenue Matters</h3>
+                    <p>Legal support in land revenue cases, mutation, partition and related disputes.</p>
+                    <span class="read-more">Read More →</span>
                 </a>
             </div>
         </div>
@@ -176,16 +222,59 @@
                 </div>
 
                 <!-- Contact Form -->
-                <form class="contact-form" data-aos="fade-left">
-                    <input type="text" placeholder="Your Full Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea rows="5" placeholder="Briefly describe your legal inquiry" required></textarea>
+                <form class="contact-form" data-aos="fade-left" action="https://formsubmit.co/kashyaprma913@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Your Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="5" placeholder="Briefly describe your legal inquiry" required></textarea>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- google map section -->
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps?q=Judicial+Court+Complex+Chakkar+Shimla&output=embed"
+            width="100%"
+            height="350"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <!-- sticky consultation button -->
+    <a href="#contact" class="consult-btn">
+        <i class="fas fa-calendar-check"></i>
+        <span>Book Consultation</span>
+    </a>
+
+    <!-- Mobile floating menu -->
+    <div class="mobile-contact-menu">
+        <div class="mobile-contact-options">
+            <a href="tel:+917876379427" class="m-contact call">
+            <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://wa.me/917876379427" target="_blank" class="m-contact whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:kashyaprma913@gmail.com" class="m-contact email">
+            <i class="fas fa-envelope"></i>
+            </a>
+            <a href="#contact" class="m-contact consult">
+            <i class="fas fa-calendar-check"></i>
+            </a>
+        </div>
+        <button class="mobile-contact-btn">
+        <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+
     <!-- Footer Section -->
     <footer>
         <div class="footer-container">
@@ -219,33 +308,66 @@
         <i class="fab fa-whatsapp"></i>
         </a>
 
+    
+    <div class="nav-overlay"></div>
 <!-- JS -->
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
     <script>
         document.querySelectorAll('.nav-links a').forEach(link=>{
-        link.onclick=()=>{
-        nav.classList.remove('active');
-        }
-        })
-
+            link.addEventListener("click",()=>{
+                nav.classList.remove("active");
+            });
+        });
         const menuBtn=document.querySelector('.menu-btn');
         const nav=document.querySelector('.nav-links');
-            menuBtn.onclick=()=>{
-                nav.classList.toggle('active');
+        const overlay=document.querySelector('.nav-overlay');
+
+        menuBtn.onclick=()=>{
+            nav.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        overlay.onclick=()=>{
+            nav.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        const toggle=document.querySelector('.theme-toggle');
+        toggle.onclick=()=>{
+            document.body.classList.toggle('dark');
+            if(document.body.classList.contains('dark')){
+            toggle.classList.remove('fa-moon');
+            toggle.classList.add('fa-sun');
+            }else{
+            toggle.classList.remove('fa-sun');
+            toggle.classList.add('fa-moon');
             }
-            const toggle=document.querySelector('.theme-toggle');
-            toggle.onclick=()=>{
-                document.body.classList.toggle('dark');
-                if(document.body.classList.contains('dark')){
-                toggle.classList.remove('fa-moon');
-                toggle.classList.add('fa-sun');
-                }else{
-                toggle.classList.remove('fa-sun');
-                toggle.classList.add('fa-moon');
-                }
-            }
+        }
+
+        window.addEventListener("load", function(){
+            setTimeout(function(){
+                document.querySelector(".page-loader").style.opacity="0";
+                setTimeout(function(){
+                document.querySelector(".page-loader").style.display="none";
+                },1500);
+            },3500);
+        });
+
+        window.addEventListener("scroll",()=>{
+            let scrollTop=document.documentElement.scrollTop;
+            let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+
+            let scrolled=(scrollTop/height)*100;
+
+            document.querySelector(".scroll-progress").style.width=scrolled+"%";
+        });
+        const mobileContactBtn=document.querySelector(".mobile-contact-btn");
+        const mobileContactMenu=document.querySelector(".mobile-contact-menu");
+
+        mobileContactBtn.onclick=()=>{
+            mobileContactMenu.classList.toggle("active");
+        };
     </script>
     <script>
       // AOS को चालू करना
