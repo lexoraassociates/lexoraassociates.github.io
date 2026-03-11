@@ -6,11 +6,25 @@
     font-family:'Poppins',sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#ffffff;
     color:#222;
     line-height:1.6;
     transition:0.3s;
+}
+
+.scroll-progress{
+    position:fixed;
+    top:0;
+    left:0;
+    height:4px;
+    background:#c5a059;
+    width:0%;
+    z-index:9999;
 }
 
 /* DARK MODE GLOBAL */
@@ -45,10 +59,12 @@ body.dark .contact-section{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 8%;
-    background:#ffffff;
+    padding:14px 6%;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(12px);
     box-shadow:0 4px 20px rgba(0,0,0,0.05);
     z-index:999;
+    box-sizing: border-box;
 }
 
 .navbar div{
@@ -58,7 +74,7 @@ body.dark .contact-section{
 }
 
 body.dark .navbar{
-    background:#1e293b;
+    background:rgba(30,41,59,0.7);
 }
 
 .logo{
@@ -83,12 +99,6 @@ body.dark .nav-links a{
 }
 
 /* MOBILE MENU */
-/* .menu-btn{
-    display:none;
-    font-size:22px;
-    cursor:pointer;
-} */
-
 @media (min-width:769px){
     .menu-btn{
     display:none !important;
@@ -271,6 +281,57 @@ body.dark .testimonial-card{
     color:#f1f5f9;
 }
 
+/* PRACTICE CARD PREMIUM HOVER */
+.practice-card{
+    overflow:hidden;
+}
+
+.practice-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:4px;
+    background:#c5a059;
+    transition:0.4s;
+}
+
+.practice-card:hover::before{
+    left:0;
+}
+
+.practice-card:hover .practice-icon{
+    transform:scale(1.2) rotate(5deg);
+    color:#c5a059;
+}
+
+.practice-icon{
+    transition:0.4s;
+}
+
+.practice-card:hover .read-more{
+    color:#c5a059;
+    letter-spacing:1px;
+}
+
+.practice-card::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:0;
+    height:0;
+    background:rgba(197,160,89,0.08);
+    transition:0.4s;
+    border-radius:50%;
+}
+
+.practice-card:hover::after{
+    width:250%;
+    height:250%;
+}
+
 /* testimonail-section */
 .testimonial-section{
     padding:80px 10%;
@@ -419,7 +480,7 @@ body.dark textarea{
     right:25px;
     background:#25D366;
     color:white;
-    font-size:28px;
+    font-size:26px;
     width:60px;
     height:60px;
     display:flex;
@@ -430,6 +491,48 @@ body.dark textarea{
     box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
+.whatsapp-btn{
+    animation:whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse{
+    0%{
+    box-shadow:0 0 0 0 rgba(37,211,102,0.7);
+    }
+    70%{
+    box-shadow:0 0 0 15px rgba(37,211,102,0);
+    }
+    100%{
+    box-shadow:0 0 0 0 rgba(37,211,102,0);
+    }
+}
+
+/* google Map styling */
+.map-container{
+    margin-top:40px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* sticky-consultation-button */
+.consult-btn{
+    position:fixed;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    background:#c5a059;
+    color:#002347;
+    padding:12px 20px;
+    font-weight:600;
+    border-radius:30px;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    z-index:999;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
 
 /* Footer Styling */
 footer {
@@ -476,8 +579,15 @@ body.dark footer{
 background:#020617;
 }
 
+
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+
+    html,body{
+        overflow-x:hidden;
+    }
+
     .about-container {
         flex-direction: column;
         text-align: center;
@@ -490,25 +600,70 @@ background:#020617;
     display:block;
     }
 
+    body{
+        overflow-x:hidden;
+    }
+
     .nav-links{
-        position:absolute;
-        top:70px;
+        position:fixed;
+        top:0;
         left:-100%;
-        width:100%;
-        background:#ffffff;
+        height:100vh;
+        width:260px;
+
+        /* GLASSMORPHISM */
+        background:rgba(15,23,42,0.85);
+        backdrop-filter:blur(16px);
+        -webkit-backdrop-filter:blur(16px);
+
         flex-direction:column;
-        text-align:center;
-        padding:20px;
+        align-items:flex-start;
+        padding:90px 30px;
+        gap:20px;
+
         transition:0.4s ease;
-        box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        z-index:1000;
+
+        box-shadow:0 10px 30px rgba(0,0,0,0.2);
     }
 
     .nav-links.active{
-    left:0;
+        left:0;
     }
 
+    .nav-links a{
+        font-size:18px;
+        width:100%;
+        padding:12px 0;
+        border-bottom:1px solid rgba(255,255,255,0.15);
+        color:#f8fafc;
+        font-weight:600;
+        letter-spacing:0.5px;
+    }
+
+    /* DARK MODE */
+
     body.dark .nav-links{
-    background:#1e293b;
+        background:rgba(15,23,42,0.7);
+    }
+
+    /* OVERLAY  dark transparent layer mobile menu open hone par background ko dim kar deti hai */
+    .nav-overlay{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.35);
+        opacity:0;
+        visibility:hidden;
+        transition:0.3s;
+        z-index:900;
+    }
+
+    .nav-overlay.active{
+        opacity:1;
+        visibility:visible;
     }
 
 }
