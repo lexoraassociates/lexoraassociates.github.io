@@ -1,85 +1,101 @@
 /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+body{
+    background:#ffffff;
+    color:#222;
+    line-height:1.6;
+    transition:0.3s;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    overflow-x: hidden; /* अनचाहे स्क्रॉल को रोकने के लिए */
+/* DARK MODE GLOBAL */
+body.dark{
+    background:#0f172a;
+    color:#e2e8f0;
 }
 
+body.dark .nav-links a{
+    color:#e2e8f0;
+}
+
+section{
+scroll-margin-top:80px;
+}
+
+/* sections background */
+
+body.dark .about-section,
+body.dark .practice-section,
+body.dark .testimonial-section,
+body.dark .contact-section{
+    background:#0f172a;
+    color:#e2e8f0;
+}
 /* Navbar Style */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: #002347;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#ffffff;
+    box-shadow:0 4px 20px rgba(0,0,0,0.05);
+    z-index:999;
 }
 
-/* Enhanced Logo Style */
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem; /* थोड़ा बड़ा किया */
-    font-weight: bold;
-    color: #c5a059; /* Elegant Gold */
-    letter-spacing: 1px;
+.navbar div{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-.logo span {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem;
-    color: white;
-    font-weight: normal;
-    display: block; /* नाम के नीचे दिखेगा */
-    margin-top: 2px;
+body.dark .navbar{
+    background:#1e293b;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
+.logo{
+    font-weight:700;
+    font-size:20px;
 }
 
-.nav-links li {
-    margin-left: 30px;
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
+.nav-links a{
+    text-decoration:none;
+    color:#222;
+    font-weight:500;
 }
 
-.nav-links a:hover {
-    color: #c5a059;
+body.dark .nav-links a{
+    color:#f1f5f9;
+}
+
+/* MOBILE MENU */
+/* .menu-btn{
+    display:none;
+    font-size:22px;
+    cursor:pointer;
+} */
+
+@media (min-width:769px){
+    .menu-btn{
+    display:none !important;
+    }
 }
 
 /* Hero Section */
-.hero {
-    height: 90vh;
-    background: linear-gradient(rgba(0,35,71,0.8), rgba(0,35,71,0.8)), url('https://images.unsplash.com');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
@@ -103,24 +119,125 @@ body {
     transform: translateY(-3px);
 }
 
+
+/* New Css for hero section */
+.hero{
+    height:100vh;
+    background:url("../images/legal.jpg") center/cover no-repeat;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+    max-width:700px;
+}
+
+.secondary-btn{
+    margin-left:15px;
+    padding:12px 25px;
+    border:2px solid white;
+    color:white;
+    text-decoration:none;
+}
+
+/* Counter Section */
+
+.counter-section{
+    background:#0f172a;
+    color:white;
+    padding:70px 10%;
+    text-align:center;
+}
+
+.counter-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+}
+
+.counter-box h2{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
 /* Practice Areas Section */
-.practice-section {
-    padding: 100px 10%;
-    background: #f9f9f9;
-    text-align: center;
+
+.practice-section{
+    padding:90px 10%;
+    background:#f1f5f9;
+    text-align:center;
 }
 
 .practice-link{
-text-decoration:none;
-color:inherit;
-display:block;
+    text-decoration:none;
+    color:inherit;
+    display:block;
 }
 
-.practice-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: #002347;
+.practice-section h2{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.practice-subtitle{
+    color:#555;
+    margin-bottom:50px;
+}
+
+.practice-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.practice-card{
+    background:white;
+    padding:40px 25px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+    position:relative;
+}
+
+.practice-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.practice-icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.practice-card h3{
+    margin-bottom:10px;
+}
+
+.practice-card p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.read-more{
+    text-decoration:none;
+    font-weight:600;
+    color:#0f172a;
+    border-bottom:2px solid transparent;
+    transition:0.3s;
 }
 
 .card-container {
@@ -146,6 +263,33 @@ display:block;
 .card h3 {
     margin-bottom: 15px;
     color: #002347;
+}
+
+body.dark .practice-card,
+body.dark .testimonial-card{
+    background:#1e293b;
+    color:#f1f5f9;
+}
+
+/* testimonail-section */
+.testimonial-section{
+    padding:80px 10%;
+    background:#f8fafc;
+    text-align:center;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.testimonial-card{
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
 }
 
 /* Contact Section Styling */
@@ -262,16 +406,30 @@ display:block;
     color: #002347;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-image img {
-        box-shadow: 10px 10px 0px #c5a059;
-    }
+body.dark input,
+body.dark textarea{
+    background:#1e293b;
+    color:white;
+    border:1px solid #334155;
 }
+
+.whatsapp-btn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:white;
+    font-size:28px;
+    width:60px;
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
 
 /* Footer Styling */
 footer {
@@ -312,4 +470,45 @@ footer {
 .footer-links ul li a:hover {
     color: #c5a059;
     text-decoration: underline;
+}
+
+body.dark footer{
+background:#020617;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image img {
+        box-shadow: 10px 10px 0px #c5a059;
+    }
+
+    .menu-btn{
+    display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:-100%;
+        width:100%;
+        background:#ffffff;
+        flex-direction:column;
+        text-align:center;
+        padding:20px;
+        transition:0.4s ease;
+        box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active{
+    left:0;
+    }
+
+    body.dark .nav-links{
+    background:#1e293b;
+    }
+
 }
