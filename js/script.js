@@ -80,7 +80,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 loadComponent("header","components/header.html");
 loadComponent("footer","components/footer.html");
+loadComponent("contact-section","components/contacts.html");
 
 });
+
 
 
