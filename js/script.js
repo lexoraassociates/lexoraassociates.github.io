@@ -78,8 +78,9 @@ initNavbar();
 // Page Ready
 document.addEventListener("DOMContentLoaded",()=>{
 
-loadComponent("header","header.html");
-loadComponent("footer","footer.html");
+loadComponent("header","components/header.html");
+loadComponent("footer","components/footer.html");
 
 });
+
 
