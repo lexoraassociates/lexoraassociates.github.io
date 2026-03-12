@@ -1,0 +1,284 @@
+/* CIVIL HERO */
+
+.civil-hero{
+height:60vh;
+background:url("images/civil-law.jpg") center/cover no-repeat;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+margin-top:70px;
+}
+
+.civil-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+}
+
+.civil-content{
+position:relative;
+max-width:700px;
+}
+
+.civil-content h1{
+font-family:'Playfair Display',serif;
+font-size:48px;
+margin-bottom:10px;
+}
+
+/* CIVIL ABOUT */
+
+.civil-about{
+padding:90px 10%;
+background:#f8fafc;
+}
+
+body.dark .civil-about{
+background:#0f172a;
+}
+
+.civil-about-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+align-items:center;
+}
+
+.civil-about img{
+width:100%;
+border-radius:12px;
+box-shadow:15px 15px 0 #c5a059;
+}
+
+.civil-about h2{
+font-family:'Playfair Display',serif;
+margin-bottom:15px;
+}
+
+/* CIVIL SERVICES */
+
+.civil-services{
+padding:90px 10%;
+text-align:center;
+}
+
+.civil-services h2{
+font-family:'Playfair Display',serif;
+margin-bottom:50px;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:white;
+padding:35px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* GOLD TOP LINE EFFECT */
+
+.service-card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:4px;
+background:#c5a059;
+transition:0.4s;
+}
+
+.service-card:hover::before{
+left:0;
+}
+
+/* ICON ANIMATION */
+
+.service-card i{
+font-size:35px;
+color:#c5a059;
+margin-bottom:15px;
+transition:0.4s;
+}
+
+.service-card:hover i{
+transform:scale(1.2) rotate(5deg);
+}
+
+/* SOFT GOLD BACKGROUND */
+
+.service-card::after{
+content:"";
+position:absolute;
+bottom:0;
+right:0;
+width:0;
+height:0;
+background:rgba(197,160,89,0.08);
+transition:0.4s;
+border-radius:50%;
+}
+
+.service-card:hover::after{
+width:250%;
+height:250%;
+}
+
+body.dark .service-card{
+background:#1e293b;
+color:white;
+}
+
+/* CASE EXAMPLES */
+
+.case-section{
+padding:90px 10%;
+background:#f1f5f9;
+}
+
+body.dark .case-section{
+background:#020617;
+}
+
+.case-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.case-card{
+background:white;
+padding:30px;
+border-left:4px solid #c5a059;
+border-radius:8px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+body.dark .case-card{
+background:#1e293b;
+}
+
+
+/* BREADCRUMB */
+
+/* .breadcrumb{
+margin-bottom:15px;
+font-size:14px;
+letter-spacing:0.5px;
+} */
+
+.breadcrumb{
+display:inline-block;
+padding:6px 14px;
+background:rgba(0,0,0,0.35);
+border-radius:20px;
+}
+
+.breadcrumb a{
+color:#c5a059;
+text-decoration:none;
+font-weight:500;
+}
+
+.breadcrumb span{
+margin:0 6px;
+color:#ddd;
+}
+
+.breadcrumb .current{
+color:white;
+font-weight:600;
+}
+
+body.dark .breadcrumb span{
+color:#94a3b8;
+}
+/* CIVIL PROCESS TIMELINE */
+
+.civil-process{
+padding:90px 10%;
+text-align:center;
+}
+
+.timeline{
+margin-top:50px;
+display:grid;
+gap:30px;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.timeline-item{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+position:relative;
+}
+
+.timeline-number{
+position:absolute;
+top:-15px;
+left:-15px;
+width:40px;
+height:40px;
+background:#c5a059;
+color:#002347;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+}
+
+/* FAQ */
+
+.civil-faq{
+padding:90px 10%;
+background:#f8fafc;
+}
+
+body.dark .civil-faq{
+background:#020617;
+}
+
+/* CTA */
+
+.civil-cta{
+padding:90px 10%;
+text-align:center;
+background:#002347;
+color:white;
+}
+
+.civil-cta h2{
+font-family:'Playfair Display',serif;
+margin-bottom:10px;
+}
+
+.civil-cta p{
+margin-bottom:25px;
+}
+
+
