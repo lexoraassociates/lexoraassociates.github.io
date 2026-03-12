@@ -8,8 +8,8 @@
 .mobile-contact-menu{
     display:block;
     position:fixed;
-    bottom:20px;
-    left:20px;
+    bottom:10px;
+    left:10px;
     z-index:999;
 }
 
@@ -82,3 +82,4 @@
 }
 
 }
+
