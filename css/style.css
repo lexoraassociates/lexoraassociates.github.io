@@ -134,7 +134,7 @@ body.dark .nav-links a{
     font-size:24px;
     color:white;
     cursor:pointer;
-    display:none;
+    display:none !important;
 }
 
 /* MOBILE MENU */
