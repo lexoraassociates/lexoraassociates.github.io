@@ -16,7 +16,7 @@ z-index:9999;
 .loader span{
 font-size:80px;
 display:inline-block;
-animation:loaderSpin 2s ease-in-out infinite; */
+animation:loaderSpin 1s ease-in-out infinite; */
 /* } */
 
 /* Animation */
@@ -75,7 +75,7 @@ position:absolute;
 top:-10px;
 left:50%;
 transform:translateX(-50%);
-animation:ringRotate 2s linear infinite;
+animation:ringRotate 1s linear infinite;
 }
 
 /* Golden Icon */
@@ -83,7 +83,7 @@ animation:ringRotate 2s linear infinite;
 .loader-icon{
 font-size:60px;
 color:#d4af37;
-animation:iconPulse 2s ease-in-out infinite;
+animation:iconPulse 1s ease-in-out infinite;
 }
 
 /* Law Firm Name */
